@@ -10,7 +10,7 @@ def main():
     print(f"{num_words} words found in the document")
     print()
     for item in organized_letters:
-        print(f"The {item["character"]} character was found {item["num"]} times")
+        print(f"The '{item['character']}' character was found {item['num']} times")
     print(f"--- End report ---")
 
 def get_num_words(text):
@@ -32,7 +32,6 @@ def organize(letters):
     for let in letters:
         sorted.append({"character": let, "num": letters[let]})
     sorted.sort(reverse=True, key=sort_on)
-    print(sorted)
     return sorted
 
 def get_book_text(path):
